@@ -49,12 +49,177 @@
                          Background="SkyBlue"
                          FontSize="15"
                          Header="配置">
-                    <TabControl>
-                        <TabItem Header="配置方案" />
-                        <TabItem Header="数据文件" />
+                    <TabControl Margin="5">
+                        <TabItem Header="配置方案">
+                            <DataGrid Margin="5">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="NO" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="终端" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="源端口" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="波长A" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="波长B" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="测试端口" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="阈值方案" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="测试类型" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <Label Content="标定端口" Style="{StaticResource DgHeaderLbl}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem Header="数据文件">
+
+                            <Grid Margin="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <GroupBox Grid.Row="0"
+                                          Grid.Column="0"
+                                          Header="Excel保存信息">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Margin="3" Orientation="Horizontal">
+                                            <CheckBox Content="覆盖保存" />
+                                            <Label Width="100" Content="文件名：" />
+                                            <TextBox Width="200" />
+                                        </StackPanel>
+                                        <StackPanel Margin="3" Orientation="Horizontal">
+                                            <CheckBox Content="重新保存" />
+                                            <Label Width="100" Content="文件夹名称：" />
+                                            <TextBox Width="200" />
+                                            <Label Width="100"
+                                                   HorizontalContentAlignment="Center"
+                                                   Content="文件名：" />
+                                            <TextBox Width="200" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox Grid.Row="1"
+                                          Grid.Column="0"
+                                          Header="阈值信息">
+
+                                    <DataGrid Margin="5">
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="ID" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="名称" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="波长A" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="波长B" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="IL1Max" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="IL2Max" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="RL1Min" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="RL2Min" Style="{StaticResource DgHeaderLbl}" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.HeaderTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </GroupBox>
+                            </Grid>
+                        </TabItem>
                         <TabItem Header="测试报告配置" />
                         <TabItem Header="仪表状态" />
-                        <TabItem Header="阈值方案" />
+
                         <TabItem Header="本地数据库" />
                     </TabControl>
                 </TabItem>
@@ -63,10 +228,7 @@
                          VerticalAlignment="Top"
                          Background="SkyBlue"
                          FontSize="15"
-                         Header="测试">
-
-                    <local:UserControl1 />
-                </TabItem>
+                         Header="测试" />
             </TabControl>
         </Grid>
     </Grid>

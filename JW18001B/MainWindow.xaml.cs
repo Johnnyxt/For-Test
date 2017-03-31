@@ -23,7 +23,6 @@ namespace JW18001B
         public MainWindow()
         {
             InitializeComponent();
-            //增加一条信息
         }
     }
 }

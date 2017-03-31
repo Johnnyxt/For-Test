@@ -9,17 +9,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JW18001B
+namespace JW18001B.Views
 {
     /// <summary>
-    /// TabConfigUserControl.xaml 的交互逻辑
+    /// ConnectView.xaml 的交互逻辑
     /// </summary>
-    public partial class TabConfigUserControl : UserControl
+    public partial class MainLoginView : Window
     {
-        public TabConfigUserControl()
+        public MainLoginView()
         {
             InitializeComponent();
         }
